@@ -1,0 +1,12 @@
+<div class="container">
+<h1>Welcome to your Movie Lists🎥🍿</h1>
+<p>Browse or create through your saved movies and get some inspiration for your next visit to the cinema!</p>
+</div>
+
+<div class="container">
+  <ul>
+  <% @lists.each do |list| %>
+    <li><%= list.name %></li>
+  <% end %>
+</ul>
+</div>

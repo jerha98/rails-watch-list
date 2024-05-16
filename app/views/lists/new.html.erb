@@ -1,0 +1,13 @@
+<div class="container">
+<h2>Create your own movie list 🙌</h1>
+<h3>...for your upcoming visits to the Cinema!</h2>
+</div>
+
+<div class="container">
+  <%= simple_form_for @list do |f| %>
+    <%= f.input :name, label: "Name of your List" %>
+    <%= f.button :submit, "Create List", class: "btn btn-warning", id: "submit-list" %>
+  <% end %>
+</div>
+
+<%= link_to "All Lists", lists_path %>
