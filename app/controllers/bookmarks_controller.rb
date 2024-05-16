@@ -14,6 +14,9 @@ class BookmarksController < ApplicationController
     end
   end
 
+  def delete
+  end
+
   private
 
   def bookmark_params
