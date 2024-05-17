@@ -5,6 +5,7 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
+    @bookmark = Bookmark.new
   end
 
   def new
@@ -17,6 +18,15 @@ class ListsController < ApplicationController
       redirect_to list_path(@list)
     else
       render :new, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @list = List.find(params[:id])
+    if @list.destroy
+      redirect_to root_path, notice: 'List was successfully deleted.'
+    else
+      redirect_to list_path(@list), alert: 'List could not be deleted.'
     end
   end
 

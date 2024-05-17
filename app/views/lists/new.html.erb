@@ -8,6 +8,5 @@
     <%= f.input :name, label: "Name of your List" %>
     <%= f.button :submit, "Create List", class: "btn btn-warning", id: "submit-list" %>
   <% end %>
+  <%= link_to "All Lists", lists_path %>
 </div>
-
-<%= link_to "All Lists", lists_path %>

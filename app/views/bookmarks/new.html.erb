@@ -1,6 +1,0 @@
-<%# use collection in simple form for dropdown %>
-  <%= simple_form_for [@list, @bookmark] do |f| %>
-    <%= f.input :comment, label: "Leave your comment here:" %>
-    <%= f.input :movie_id,:collection => @movies,:include_blank => false %>
-    <%= f.button :submit, "Create a bookmark", class: "btn btn-warning", id: "submit-bookmark" %>
-  <% end %>
